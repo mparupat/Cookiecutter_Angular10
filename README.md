@@ -19,7 +19,7 @@
 ## How to use
 1. Install cookiecutter with "pip install --user cookiecutter"
 
-2. After installation is complete run following command " cookiecutter https://github.com/parupati/Cookiecutter_Angular10 "
+2. After installation is complete run following command " cookiecutter https://github.com/mparupat/Cookiecutter_Angular10 "
 
 3. It will prompt you to enter project name and other necessary details. click enter it will create the boiler plate for your angular application.
 
