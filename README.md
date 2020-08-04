@@ -1,20 +1,23 @@
 # Cookiecutter_Angular10
 
 ## What does this project do
+1.	It has integration of bootstrap and primeng within it. No need to separately add the dependencies and worry about configuration.
 
-1. It has integration of bootstrap and primeng within it. No need to seperatly add the dependencies and worry about configuration.
-2. Folder structure is catogorised as "Core" , "Modules" and "shared" .
+2.	Folder structure is categorized as "Core" , "Modules" and "shared" .
 
-   Core for standerd services and major components like Authentication, constants, Card component, Slider component etc.
+   Core for standard services and major components like Authentication, constants, Card component, Slider component etc.
    
    Modules for main pages or views like "Home", "Search" etc.
    
-   Shared for components,filters that are used in mulltiple components like "dropdown" , "customized multiselect" etc  
-3. Authentication mechanism with ( OKTA Open ID and AWS Cognito ) ready to use with route guard created and AWS APIG Client rest api integrated in api.service for making Rest calls with AWS.
+   Shared for components, filters that are used in multiple components like "dropdown" , "customized multiselect" etc.
+   
+   
+3.	Authentication mechanism with ( OKTA Open ID and AWS Cognito ) ready to use with route guard created and AWS APIG Client rest api integrated in api.service for making Rest calls with AWS.
 
-4. A single "env.js" file for storing sensitive information integrated with "Env Service" and values of env.js file can be accessed with service "EnvservService" injection in components. This give more flexibility, security and reusability.
+4.	A single "env.js" file for storing sensitive information integrated with "Env Service" and values of env.js file can be accessed with service "EnvservService" injection in components. This give more flexibility, security and reusability.
 
-5. Modules are lazy loaded to avoide unnecessary dependency injections.
+5.	Modules are lazy loaded to avoid unnecessary dependency injections.
+
 
 ## How to use
 1. Install cookiecutter with "pip install --user cookiecutter"
