@@ -5,11 +5,11 @@
 
 2.	Folder structure is categorized as "Core" , "Modules" and "shared" .
 
-   Core for standard services and major components like Authentication, constants, Card component, Slider component etc.
+       Core for standard services and major components like Authentication, constants, Card component, Slider component etc.
    
-   Modules for main pages or views like "Home", "Search" etc.
+       Modules for main pages or views like "Home", "Search" etc.
    
-   Shared for components, filters that are used in multiple components like "dropdown" , "customized multiselect" etc.
+       Shared for components, filters that are used in multiple components like "dropdown" , "customized multiselect" etc.
    
    
 3.	Authentication mechanism with ( OKTA Open ID and AWS Cognito ) ready to use with route guard created and AWS APIG Client rest api integrated in api.service for making Rest calls with AWS.
