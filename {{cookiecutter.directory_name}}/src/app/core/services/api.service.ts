@@ -13,8 +13,13 @@ export class ApiService {
 
   constructor(private auth: AuthService, private env: EnvservService) { }
 
-  getData(method, url, params, body, additionalParams) {
-    let result = this.auth.authenticate();
+  async authenticateApi(): Promise<boolean> {
+    let result: Promise<any> = this.auth.authenticate();
+    let res: any = await result;
+    return res;
+  }
+  getData(method, url, params, body, additionalParams,queryParams) {
+    let result = this.authenticateApi();
     if (result) {
       let apigClient = APIG.newClient({
         accessKey: this.auth.AccessKeyId,
@@ -33,6 +38,9 @@ export class ApiService {
         additionalParams = {
           'withCredentials': true,
         };
+        if (queryParams) {
+          additionalParams['queryParams'] = queryParams;
+        }
       }
       return new Observable((observer) => {
         apigClient.invokeApi(params, url, method, additionalParams, body)
