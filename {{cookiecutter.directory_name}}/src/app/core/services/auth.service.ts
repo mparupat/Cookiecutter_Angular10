@@ -20,13 +20,12 @@ export class AuthService implements CanLoad {
     let access = true;
     return access;
   }
-  authenticate() {
+  async authenticate() {
     if (localStorage.getItem('access_token') && localStorage.getItem('id_token') && new Date() <= new Date(Number(localStorage.getItem('id_token_expiry')))) {
       localStorage.setItem('curURL', window.location.href);
       if (!this.expireTime || new Date() > new Date(this.expireTime)) {
-        let response = this.validateWithCognito();
-        let returnVal = (response) ? true : false;
-        return returnVal;
+        let response = await this.validateWithCognito();
+        return response;
       } else {
         return true;
       }
