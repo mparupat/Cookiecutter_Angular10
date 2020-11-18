@@ -15,9 +15,9 @@ export class AuthService implements CanLoad {
   accessToken;
   expireTime;
   constructor(private env: EnvservService, private router: Router) { }
-  async canLoad(route: Route) {
-    /*     let access = await this.authenticate(); // enable this after you add okta details */
-    let access = true;
+  async canLoad(route: Route): Promise<boolean> {
+    /*     let access : any = await this.authenticate(); // enable this after you add okta details */
+    let access: any = true;
     return access;
   }
   async authenticate() {
